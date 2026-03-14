@@ -23,41 +23,41 @@ export default function ClientDashboard({ stats, recentTickets, onOpenModal }: C
         <p className="text-emerald-700">Welcome back! Here&apos;s an overview of your support requests.</p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-        <div className="bg-white p-6 rounded-lg shadow-md border border-emerald-100">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 mb-8">
+        <div className="bg-white p-4 sm:p-5 rounded-xl shadow-md border border-emerald-100">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm font-medium text-emerald-600">Total Tickets</p>
-              <p className="text-3xl font-bold text-emerald-900">{stats.totalTickets}</p>
+              <p className="text-xs sm:text-sm font-semibold uppercase text-emerald-600 tracking-wide">Total Tickets</p>
+              <p className="text-2xl sm:text-3xl font-bold text-emerald-900">{stats.totalTickets}</p>
             </div>
-            <div className="text-3xl">🎫</div>
+            <div className="text-2xl">🎫</div>
           </div>
         </div>
-        <div className="bg-white p-6 rounded-lg shadow-md border border-emerald-100">
+        <div className="bg-white p-4 sm:p-5 rounded-xl shadow-md border border-emerald-100">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm font-medium text-emerald-600">Completed</p>
-              <p className="text-3xl font-bold text-emerald-900">{stats.completedTickets}</p>
+              <p className="text-xs sm:text-sm font-semibold uppercase text-emerald-600 tracking-wide">Completed</p>
+              <p className="text-2xl sm:text-3xl font-bold text-emerald-900">{stats.completedTickets}</p>
             </div>
-            <div className="text-3xl">✅</div>
+            <div className="text-2xl">✅</div>
           </div>
         </div>
-        <div className="bg-white p-6 rounded-lg shadow-md border border-emerald-100">
+        <div className="bg-white p-4 sm:p-5 rounded-xl shadow-md border border-emerald-100">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm font-medium text-emerald-600">In Progress</p>
-              <p className="text-3xl font-bold text-emerald-900">{stats.inProgressTickets}</p>
+              <p className="text-xs sm:text-sm font-semibold uppercase text-emerald-600 tracking-wide">In Progress</p>
+              <p className="text-2xl sm:text-3xl font-bold text-emerald-900">{stats.inProgressTickets}</p>
             </div>
-            <div className="text-3xl">🔄</div>
+            <div className="text-2xl">🔄</div>
           </div>
         </div>
-        <div className="bg-white p-6 rounded-lg shadow-md border border-emerald-100">
+        <div className="bg-white p-4 sm:p-5 rounded-xl shadow-md border border-emerald-100">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm font-medium text-emerald-600">Pending</p>
-              <p className="text-3xl font-bold text-emerald-900">{stats.pendingTickets}</p>
+              <p className="text-xs sm:text-sm font-semibold uppercase text-emerald-600 tracking-wide">Pending</p>
+              <p className="text-2xl sm:text-3xl font-bold text-emerald-900">{stats.pendingTickets}</p>
             </div>
-            <div className="text-3xl">⏳</div>
+            <div className="text-2xl">⏳</div>
           </div>
         </div>
       </div>

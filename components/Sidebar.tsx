@@ -1,7 +1,8 @@
 interface SidebarProps {
-role: 'admin' | 'client' | 'operator' | 'technician';
-activeTab: string;
-onTabChange: (tab: string) => void;
+  role: 'admin' | 'client' | 'operator' | 'technician';
+  activeTab: string;
+  onTabChange: (tab: string) => void;
+  onNavigate?: () => void;
 }
 
 const menuItems = {
@@ -32,11 +33,11 @@ technician: [
 ],
 };
 
-export default function Sidebar({ role, activeTab, onTabChange }: SidebarProps) {
+export default function Sidebar({ role, activeTab, onTabChange, onNavigate }: SidebarProps) {
   const items = menuItems[role];
 
   return (
-    <div className="w-64 bg-linear-to-b from-emerald-900 via-emerald-800 to-emerald-900 text-white h-screen sticky top-0 border-r border-emerald-700 shadow-lg">
+    <div className="w-56 bg-linear-to-b from-emerald-900 via-emerald-800 to-emerald-900 text-white h-full md:h-screen border-r border-emerald-700 shadow-lg overflow-y-auto">
       <div className="p-6">
         <div className="mb-5 rounded-xl bg-white/10 p-3 text-center">
           <span className="text-xl">🛡️</span>
@@ -46,7 +47,10 @@ export default function Sidebar({ role, activeTab, onTabChange }: SidebarProps) 
           {items.map((item) => (
             <button
               key={item.id}
-              onClick={() => onTabChange(item.id)}
+              onClick={() => {
+                onTabChange(item.id);
+                onNavigate?.();
+              }}
               className={`w-full text-left px-4 py-3 rounded-xl transition-colors flex items-center space-x-3 text-sm font-semibold ${
                 activeTab === item.id
                   ? 'bg-emerald-500 text-white shadow-inner'

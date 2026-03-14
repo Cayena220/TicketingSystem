@@ -9,13 +9,13 @@ interface MyTicketsProps {
 
 export default function MyTickets({ tickets, onResponderClick }: MyTicketsProps) {
   return (
-    <div className="p-8 bg-[#f0fdf4] min-h-screen">
-      <div className="mb-6 flex items-center gap-3 text-emerald-900">
-        <button className="text-xl p-1 rounded-md hover:bg-emerald-200 transition"><span className="text-2xl">←</span></button>
+    <div className="px-3 py-6 md:px-8 md:py-8 bg-[#f0fdf4] min-h-screen">
+      <div className="mb-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 text-emerald-900">
         <div>
-          <p className="text-sm text-emerald-600">My Requests</p>
-          <h1 className="text-3xl font-bold text-emerald-900">Hardware Repair Support</h1>
+          <p className="text-xs uppercase tracking-[0.15em] text-emerald-600">My Requests</p>
+          <h1 className="text-2xl md:text-3xl font-bold text-emerald-900">Hardware Repair Support</h1>
         </div>
+        <button className="text-xs sm:text-sm px-3 py-2 rounded-lg border border-emerald-300 bg-white text-emerald-700 hover:bg-emerald-50">Back</button>
       </div>
 
       <div className="space-y-4">
