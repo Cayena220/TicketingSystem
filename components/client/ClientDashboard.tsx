@@ -17,8 +17,8 @@ interface ClientDashboardProps {
 
 export default function ClientDashboard({ stats, recentTickets, onOpenModal }: ClientDashboardProps) {
   return (
-    <div className="p-8 bg-[#ecfdf3] min-h-screen">
-      <div className="mb-8">
+    <div className="p-4 md:p-6 min-h-full">
+      <div className="mb-6">
         <h1 className="text-3xl font-bold text-emerald-900 mb-2">Client Dashboard</h1>
         <p className="text-emerald-700">Welcome back! Here&apos;s an overview of your support requests.</p>
       </div>

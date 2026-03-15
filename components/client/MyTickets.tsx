@@ -9,7 +9,7 @@ interface MyTicketsProps {
 
 export default function MyTickets({ tickets, onResponderClick }: MyTicketsProps) {
   return (
-    <div className="px-3 py-6 md:px-8 md:py-8 bg-[#f0fdf4] min-h-screen">
+    <div className="px-3 py-4 md:px-6 md:py-6 min-h-full">
       <div className="mb-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 text-emerald-900">
         <div>
           <p className="text-xs uppercase tracking-[0.15em] text-emerald-600">My Requests</p>

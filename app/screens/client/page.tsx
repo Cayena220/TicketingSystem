@@ -107,7 +107,7 @@ export default function ClientPage() {
   };
 
   return (
-    <div className="relative min-h-screen bg-linear-to-b from-emerald-50 via-white to-emerald-100">
+    <div className="min-h-screen bg-slate-50 text-slate-800">
       {mobileMenuOpen && (
         <div
           onClick={() => setMobileMenuOpen(false)}
@@ -115,9 +115,9 @@ export default function ClientPage() {
         />
       )}
 
-      <div className="flex">
+      <div className="flex min-h-screen">
         {mobileMenuOpen && (
-          <div className="fixed inset-y-0 left-0 z-30 w-56 overflow-y-auto bg-white/95 shadow-xl md:hidden">
+          <div className="fixed inset-y-0 left-0 z-30 w-72 overflow-y-auto bg-white drop-shadow-2xl md:hidden">
             <Sidebar
               role="client"
               activeTab={activeTab}
@@ -127,45 +127,39 @@ export default function ClientPage() {
           </div>
         )}
 
-        <div className="hidden md:block w-56 h-screen sticky top-0 left-0 border-r border-emerald-200 bg-white/95 shadow-xl overflow-y-auto">
+        <aside className="hidden md:block w-72 h-screen sticky top-0 left-0 border-r border-slate-200 bg-white/95 shadow-lg overflow-y-auto">
           <Sidebar
             role="client"
             activeTab={activeTab}
             onTabChange={setActiveTab}
             onNavigate={() => setMobileMenuOpen(false)}
           />
-        </div>
+        </aside>
 
-        <div className="flex-1 md:ml-56">
-          <header className="sticky top-0 z-20 border-b border-emerald-200 bg-white/90 backdrop-blur p-3 md:p-4 shadow-sm flex items-center justify-between">
+        <div className="flex-1">
+          <header className="sticky top-0 z-20 border-b border-slate-200 bg-white/95 backdrop-blur p-3 md:p-4 shadow-sm flex items-center justify-between">
             <div className="flex items-center gap-2">
               <button
                 onClick={() => setMobileMenuOpen((prev) => !prev)}
-                className="rounded-md border border-emerald-300 bg-white p-2 md:hidden"
+                className="rounded-md border border-slate-300 bg-white p-2 md:hidden"
               >
                 ☰
               </button>
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.15em] text-emerald-500">
-                  Client Panel
-                </p>
-                <h1 className="text-xl md:text-2xl font-bold text-emerald-900">
-                  Support Dashboard
-                </h1>
+                <p className="text-xs font-semibold uppercase tracking-[0.15em] text-slate-500">Client Panel</p>
+                <h1 className="text-xl md:text-2xl font-bold text-slate-900">Support Dashboard</h1>
               </div>
             </div>
             <button
-              className="hidden md:flex items-center gap-2 rounded-full border border-emerald-300 bg-white px-3 py-2 text-sm font-semibold text-emerald-700 shadow-sm hover:bg-emerald-50"
+              className="hidden md:flex items-center gap-2 rounded-full border border-slate-300 bg-white px-3 py-2 text-sm font-semibold text-slate-700 shadow-sm hover:bg-slate-50"
               onClick={() => setActiveTab("notifications")}
             >
               🔔 Notifications
-              <span className="rounded-full bg-emerald-600 px-2 py-0.5 text-[10px] font-bold text-white">
-                3
-              </span>
+              <span className="rounded-full bg-emerald-600 px-2 py-0.5 text-[10px] font-bold text-white">3</span>
             </button>
           </header>
 
-          <main className="p-3 md:p-4 pt-4">{renderContent()}</main>
+          <main className="p-3 md:p-6">{renderContent()}</main>
         </div>
       </div>
 

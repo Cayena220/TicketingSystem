@@ -6,7 +6,7 @@ interface MessagesPanelProps {
 
 export default function MessagesPanel({ selectedResponder }: MessagesPanelProps) {
   return (
-    <div className="p-8 bg-[#f0fdf4] min-h-screen">
+    <div className="p-4 md:p-6 min-h-full">
       <h1 className="text-3xl font-bold text-emerald-900 mb-4">Messages</h1>
       {selectedResponder ? (
         <div className="bg-white p-6 rounded-lg shadow-md border border-emerald-100">

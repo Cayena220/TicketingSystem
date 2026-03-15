@@ -12,9 +12,9 @@ export default function Notifications() {
   const hasNotifications = sampleNotifications.length > 0;
 
   return (
-    <div className="p-8 bg-[#f0fdf4] min-h-screen">
+    <div className="p-4 md:p-6 min-h-full">
       <div className="rounded-2xl border border-emerald-200 bg-white p-4 text-emerald-900 font-semibold text-lg shadow-sm">Notification</div>
-      <div className="mt-2 rounded-2xl border border-emerald-200 bg-white p-4 min-h-[calc(100vh-10rem)] shadow-sm">
+      <div className="mt-2 rounded-2xl border border-emerald-200 bg-white p-4 shadow-sm">
         {!hasNotifications ? (
           <div className="flex flex-col items-center justify-center h-80 text-center text-slate-500">
             <div className="mb-4 h-24 w-24 rounded-full bg-slate-100 flex items-center justify-center text-4xl">🔔</div>
